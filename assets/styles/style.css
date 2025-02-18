@@ -15,6 +15,11 @@ p {
     color: white;
 }
 
+#section-titre {
+    text-align: center;
+    padding: 30px;
+}
+
 /* HEADER */
 /* (peut-être à faire plus tard: optimiser le code en réduisant le nombre de display flex & align-items) */
 
@@ -84,7 +89,7 @@ nav button {
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../images/header.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/header.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -104,8 +109,8 @@ nav button {
     align-items: center;
     text-align: center;
     height: auto;
-    gap: 40px;
-    padding: 40px;
+    gap: 20px;
+    padding: 20px 20px 60px;
 }
 
 #don p {
@@ -129,7 +134,7 @@ nav button {
     gap: 20px;
 }
 
-#don10, #don20, #don50 {
+#don-prix {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,6 +161,7 @@ nav button {
 
 #mission {
     background: linear-gradient(45deg, #EDFEF6, #D2FAE8);
+    padding: 20px 0;
 }
 
 #container-mission {
@@ -184,6 +190,81 @@ nav button {
     max-width: 50%;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
+}
+
+/* HISTOIRE */
+
+#histoire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 60px;
+    gap: 20px;
+}
+
+#histoire-full {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 40vh, rgba(0, 0, 0, 1)), url("../images/luna.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+}
+
+#full-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#full-date {
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+#histoire-short {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+#animal-card {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#animal-card:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/luna.jpg");
+}
+
+#animal-card:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/oscar.jpg");
+}
+
+#animal-card:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/max.jpg");
+}
+
+#animal-text {
+    position: absolute;
+    font-weight: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 620px) {
