@@ -152,6 +152,40 @@ nav button {
     color: black;
 }
 
+/* MISSION */
+
+#mission {
+    background: linear-gradient(45deg, #EDFEF6, #D2FAE8);
+}
+
+#container-mission {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 20px;
+}
+
+#mission-texte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 30px;
+    gap: 20px;
+    background-color: white;
+}
+
+#mission-texte p {
+    font-size: 16px;
+    color: black;
+}
+
+#mission img {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
 @media (max-width: 620px) {
 
     header {
@@ -197,4 +231,13 @@ nav button {
         max-width: none;
         color: black;
     }
+
+    #mission img {
+        max-width: 100%;
+    }
+
+    #container-mission {
+        flex-direction: column;
+    }
+    
 }
