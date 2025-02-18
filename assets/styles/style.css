@@ -5,6 +5,16 @@
     font-family: Arial, sans-serif;
 }
 
+h1 {
+    font-size: 48px;
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
 /* HEADER */
 /* (peut-être à faire plus tard: optimiser le code en réduisant le nombre de display flex & align-items) */
 
@@ -14,11 +24,6 @@ header {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-}
-
-header p {
-    font-size: 20px;
-    color: white;
 }
 
 .titre {
@@ -69,8 +74,23 @@ nav button {
     padding: 0 5px;
 }
 
+/* ACCUEIL */
+
+#accueil-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
 @media (max-width: 620px) {
-    
+
     header {
         height: auto;
         flex-direction: column;
@@ -85,5 +105,9 @@ nav button {
         max-width: none;
         margin: 0 auto;
         align-self: center;
+    }
+
+    h1 {
+        font-size: 36px;
     }
 }
