@@ -16,13 +16,36 @@
                 <p><strong>Quatre Pattes</strong></p>
             </div>
             <nav>
-                <p>Accueil</p>
-                <p>Contact</p>
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Contact</a>
                 <button><span id="heart">♡</span> Faire un don</button>
             </nav>
         </header>
 
         <main>
+            <section id="contact">
+                <h2 id="section-titre">Contactez-nous</h2>
+                <div id="container-contact" class="drop-shadow">
+                    <label for="nom">Nom</label>
+                    <input id="nom" type="text">
+                    <label for="email">Email</label>
+                    <input id="email" type="text">
+                    <label for="sujet">Sujet</label>
+                    <select id="sujet">
+                        <option value="">-</option>
+                        <option value="don">Question sur les dons</option>
+                        <option value="benevole">Devenir bénévole</option>
+                        <option value="partenariat">Partenariat</option>
+                        <option value="general">Questions générales</option>
+                    </select>
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
+                    <div id="envoyer">
+                        <img src="assets/images/icons/send.svg" alt="Envoyer icône">
+                        <p>Envoyer</p>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>
