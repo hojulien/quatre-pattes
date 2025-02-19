@@ -27,3 +27,9 @@ prix.forEach((x) => {
 freq.forEach((x) => {
     addEvent(x, freq, "selected-freq");
 });
+
+button.addEventListener("click", () => {
+    let selectedPrix = document.querySelector(".selected-don").getAttribute("data-value");
+    let selectedFreq = document.querySelector(".selected-freq").textContent.toLowerCase();
+    alert(`Vous avez choisi l'option: ${selectedPrix}, ${selectedFreq}`);
+});
