@@ -28,8 +28,10 @@
                 <form id="container-contact" class="drop-shadow">
                     <label for="nom">Nom</label>
                     <input id="nom" type="text">
+                    <div class="erreur" id="erreur-nom"></div>
                     <label for="email">Email</label>
                     <input id="email" type="text">
+                    <div class="erreur" id="erreur-email"></div>
                     <label for="sujet">Sujet</label>
                     <select id="sujet">
                         <option value="">-</option>
@@ -38,12 +40,14 @@
                         <option value="partenariat">Partenariat</option>
                         <option value="general">Questions générales</option>
                     </select>
+                    <div class="erreur" id="erreur-sujet"></div>
                     <label for="message">Message</label>
                     <textarea id="message"></textarea>
-                    <div id="envoyer">
+                    <div class="erreur" id="erreur-message"></div>
+                    <button type="submit" id="envoyer">
                         <img src="assets/images/icons/send.svg" alt="Envoyer icône">
                         <p class="white">Envoyer</p>
-                    </div>
+                    </button>
                 </form>
             </section>
         </main>
@@ -66,6 +70,6 @@
                 </div>
             </div>
         </footer>
-        
+        <script src="assets/scripts/formulaire.js"></script>
     </body>
 </html>

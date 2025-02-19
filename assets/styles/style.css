@@ -45,11 +45,15 @@ h3, p, nav a, button {
 }
 
 /* FLEXBOX COLONNE ENTIREMENT CENTREE */
-#accueil-image, #don, #don-prix, #histoire, #quiz, #impact, .impact-box {
+#accueil-image, #don, .don-prix, #histoire, #quiz, #impact, .impact-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+nav button, #don-button {
+    cursor: pointer;
 }
 
 /* SECTIONS-SPECIFIQUES */
@@ -148,7 +152,7 @@ nav button {
     gap: 20px;
 }
 
-#don-prix {
+.don-prix {
     gap: 5px;
     width: 100%;
     border: 3px solid #EEEEEE;
@@ -163,7 +167,8 @@ nav button {
     gap: 20px;
 }
 
-#choix-freq button {
+.freq {
+    font-size: 16px;
     background-color: #EEEEEE;
     color: black;
 }
@@ -244,7 +249,7 @@ nav button {
     border-radius: 10px;
 }
 
-#animal-card {
+.animal-card {
     position: relative;
     background-size: cover;
     background-position: center;
@@ -254,19 +259,19 @@ nav button {
     border-radius: 10px;
 }
 
-#animal-card:nth-child(1) {
+.animal-card:nth-child(1) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/luna.jpg");
 }
 
-#animal-card:nth-child(2) {
+.animal-card:nth-child(2) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/oscar.jpg");
 }
 
-#animal-card:nth-child(3) {
+.animal-card:nth-child(3) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/max.jpg");
 }
 
-#animal-text {
+.animal-text {
     position: absolute;
     font-weight: bold;
     left: 50%;
@@ -306,13 +311,34 @@ nav button {
     gap: 20px;
 }
 
-.reponse {
-    display: flex;
-    align-items: center;
+.reponse, .correction {
     flex: 1;
     background-color: #EEEEEE;
     border-radius: 10px;
     padding: 20px;
+}
+
+.reponse {
+    display: flex;
+    align-items: center;
+}
+
+.correction {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    line-height: 25px;
+}
+
+.correction img {
+    width: 64px;
+    height: 64px;
+}
+
+.reponse:hover {
+    background-color: #CCCCCC;
+    cursor: pointer;
 }
 
 #container-impact {
@@ -429,9 +455,32 @@ textarea {
     font-size: 20px;
     font-weight: bold;
     background-color: #08956A;
+    height: auto;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+/* INTERACTIONS JAVASCRIPT */
+
+.erreur {
+    font-size: 14px;
+    color: red;
+}
+
+.selected-don {
+    border: 3px solid #12B784;
+    background-color: #EFEFEF;
+}
+
+.selected-freq {
+    color: white;
+    background-color: #0CB981;
+}
+
+.selected-animal {
+    border: 3px solid #12B784;
 }
 
 @media (max-width: 620px) {

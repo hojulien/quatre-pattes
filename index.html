@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/styles/style.css">
-        <script src="assets/scripts/app.js" defer></script>
         <title>Quatre Pattes</title>
     </head>
 
@@ -31,25 +30,25 @@
                 <h2 id="section-titre">Faites un don</h2>
                 <div id="container-dons" class="drop-shadow">
                     <div id="choix-don">
-                        <div id="don-prix">
+                        <div data-value="10€" class="don-prix selected-don">
                             <h2>10€</h2>
                             <p>permet de nourrir 5 animaux pendant une journée</p>
                         </div>
-                        <div id="don-prix">
+                        <div data-value="20€" class="don-prix">
                             <h2>20€</h2>
                             <p>permet d'héberger un animal sauvage pendant une nuit</p>
                         </div>
-                        <div id="don-prix">
+                        <div data-value="50€" class="don-prix">
                             <h2>50€</h2>
                             <p>permet de financer les soins vétérinaires complets pour un animal</p>
                         </div>
                     </div>
                     <div id="choix-freq">
-                        <button>Une fois</button>
-                        <button>Mensuel</button>
-                        <button>Annuel</button>
+                        <button data-value=" unique" class="freq selected-freq">Une fois</button>
+                        <button data-value="/mois" class="freq">Mensuel</button>
+                        <button data-value="/an" class="freq">Annuel</button>
                     </div>
-                    <button><span id="heart">♡</span> Faire un don de</button>
+                    <button id="don-button"><span id="heart">♡</span> Faire un don de 10€ unique</button>
                 </div>
             </section>
             <section id="mission">
@@ -78,14 +77,14 @@
                     <p class="gray">Janvier 2024</p>
                 </div>
                 <div id="histoire-short">
-                    <div id="animal-card">
-                        <p id="animal-text">Luna</p>
+                    <div class="animal-card selected-animal">
+                        <p class="animal-text">Luna</p>
                     </div>
-                    <div id="animal-card">
-                        <p id="animal-text">Oscar</p>
+                    <div class="animal-card">
+                        <p class="animal-text">Oscar</p>
                     </div>
-                    <div id="animal-card">
-                        <p id="animal-text">Max</p>
+                    <div class="animal-card">
+                        <p class="animal-text">Max</p>
                     </div>
                 </div>
             </section>
@@ -95,10 +94,16 @@
                     <div class="quiz-box drop-shadow">
                         <h3>Les associations gardent la majorité des dons pour leur fonctionnement</h3>
                         <div class="quiz-reponse">
-                            <div class="reponse">
+                            <div class="correction">
+                                <img src="" alt="">
+                                <p>Faux! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux.
+                                   Seuls 15% servent aux frais de fonctionnement essentiels.
+                                </p>
+                            </div>
+                            <div class="reponse" data-correct="false">
                                 <p>Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</p>
                             </div>
-                            <div class="reponse">
+                            <div class="reponse" data-correct="true">
                                 <p>Faux</p>
                             </div>
                         </div>
@@ -106,10 +111,16 @@
                     <div class="quiz-box drop-shadow">
                         <h3>Les refuges ne prennent que les animaux en bonne santé</h3>
                         <div class="quiz-reponse">
-                            <div class="reponse">
+                            <div class="correction">
+                                <img src="" alt="">
+                                <p>Faux! Nous accueillons tous les animaux, quel que soit leur état de santé. 
+                                   Chaque vie compte!
+                                </p>
+                            </div>
+                            <div class="reponse" data-correct="false">
                                 <p>Vrai, ils refusent les animaux malades car c'est trop coûteux</p>
                             </div>
-                            <div class="reponse">
+                            <div class="reponse" data-correct="true">
                                 <p>Faux</p>
                             </div>
                         </div>
@@ -117,14 +128,21 @@
                     <div class="quiz-box drop-shadow">
                         <h3>Les associations ont trop de moyens grâce aux dons</h3>
                         <div class="quiz-reponse">
-                            <div class="reponse">
+                            <div class="correction">
+                                <img src="" alt="">
+                                <p>Faux ! Les besoins sont immenses et constants.
+                                   Chaque don est précieux pour sauver plus d'animaux.
+                                </p>
+                            </div>
+                            <div class="reponse" data-correct="false">
                                 <p>Vrai, elles reçoivent beaucoup d'argent des donateurs</p>
                             </div>
-                            <div class="reponse">
+                            <div class="reponse" data-correct="true">
                                 <p>Faux</p>
                             </div>
                         </div>
                     </div>
+                    <div id="score"></div>
                 </div>
                 <div id="impact">
                     <h2 id="section-titre">Notre Impact</h2>
@@ -202,5 +220,8 @@
             </div>
         </footer>
         
+        <script src="assets/scripts/don.js" defer></script>
+        <script src="assets/scripts/thumbnail.js" defer></script>
+        <script src="assets/scripts/quiz.js" defer></script>
     </body>
 </html>
