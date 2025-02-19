@@ -387,6 +387,35 @@ nav button {
     border-radius: 10px;
 }
 
+/* FOOTER */
+
+footer {
+    background-color: #1F2937;
+    padding: 20px;
+}
+
+#container-footer {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+#footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* n'oublie pas de commit */
+
 @media (max-width: 620px) {
 
     header {
@@ -415,18 +444,6 @@ nav button {
         gap: 20px;
     }
 
-    #don10, #don20, #don50 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: none;
-        width: 100%;
-        padding: 20px;
-        gap: 5px;
-        border: 3px solid #EEEEEE;
-        border-radius: 10px;
-    }
-
     #don p {
         font-size: 16px;
         max-width: none;
@@ -451,6 +468,10 @@ nav button {
     }
     
     #container-refuge {
+        flex-direction: column;
+    }
+
+    #container-footer {
         flex-direction: column;
     }
 }
